@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: AppColor.kAccent),
+            style: ElevatedButton.styleFrom(backgroundColor: AppColor.kPrimary),
             onPressed: () {
               Navigator.pushReplacementNamed(context, '/login');
             },
@@ -110,10 +110,23 @@ class AccountPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Account Settings',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'Account Settings',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: AppColor.kPrimary),
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/login');
+            },
+            child: const Text('Logout'),
+          ),
+        ],
       ),
     );
   }
