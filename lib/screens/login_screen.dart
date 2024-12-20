@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (isValidUser) {
         showSnackBar(context, text: "Login successful!");
-        Navigator.pushNamed(context, '/home');
+        Navigator.pushNamed(context, '/dashboard');
       } else {
         showSnackBar(context, text: "Incorrect email or password");
       }

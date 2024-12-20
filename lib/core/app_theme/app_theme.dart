@@ -20,13 +20,18 @@ ThemeData getApplicationTheme() {
         textStyle: const TextStyle(
           fontSize: 18,
           color: Colors.white,
-          fontWeight: FontWeight.w500,
+          fontFamily: 'Montserrat Bold',
         ),
         backgroundColor: const Color(0xFFFF6600),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),
         ),
       ),
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      selectedItemColor: Color(0xFFFF6600),
+      unselectedItemColor: Colors.grey,
+      backgroundColor: Colors.white,
     ),
   );
 }

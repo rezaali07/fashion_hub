@@ -1,5 +1,5 @@
+import 'package:fashion_hub/screens/dashboard_screen.dart';
 import 'package:fashion_hub/screens/forgot_password_screen.dart';
-import 'package:fashion_hub/screens/home_screen.dart';
 import 'package:fashion_hub/screens/login_screen.dart';
 import 'package:fashion_hub/screens/onboarding_screen.dart';
 import 'package:fashion_hub/screens/register_screen.dart';
@@ -10,7 +10,7 @@ class AppRoute {
 
   static const String splashScreen = '/';
   static const String onboarding = '/onboarding';
-  static const String home = '/home';
+  static const String dashboard = '/dashboard';
   static const String register = '/register';
   static const String forgetPassword = '/forgetPassword';
   static const String login = '/login';
@@ -20,7 +20,7 @@ class AppRoute {
       splashScreen: (context) => const SplashScreen(),
       onboarding: (contex) => const OnboardingScreen(),
       login: (context) => const LoginScreen(),
-      home: (context) => const HomeScreen(),
+      dashboard: (context) => const DashboardScreen(),
       register: (context) => const RegisterScreen(),
       forgetPassword: (context) => const ForgotPasswordScreen()
     };
