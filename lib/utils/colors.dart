@@ -12,9 +12,11 @@ class AppColor {
   static const Color kSurface = Color(0xFFFFFFFF); // Pure white
 
   // Text Colors
-  static const Color kTextPrimary = Color(0xFF333333); // Dark text
+  static const Color kTextPrimary = Color.fromARGB(255, 4, 4, 4); // Dark text
   static const Color kTextSecondary = Color(0xFF757575);
   static const Color kText = Color.fromARGB(255, 255, 255, 255);
+  static const Color kTextBtn = Color.fromARGB(255, 255, 255, 255);
+
   // Gray text
 
   // Borders and Dividers
