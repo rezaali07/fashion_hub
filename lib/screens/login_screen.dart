@@ -1,7 +1,6 @@
 import 'package:fashion_hub/utils/image_paths.dart';
 import 'package:fashion_hub/utils/snackbar.dart';
 import 'package:flutter/material.dart';
-import 'package:fashion_hub/utils/colors.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -18,8 +17,8 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isPasswordVisible = false;
 
   final List<Map<String, String>> _validUsers = [
-    {"email": "test", "password": "test"},
-    {"email": "admin", "password": "admin123"},
+    {"email": "reza@gmail.com", "password": "reza123"},
+    {"email": "admin@gmail.com", "password": "admin123"},
     {"email": "user", "password": "admin123"},
   ];
 
@@ -47,8 +46,9 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
-        backgroundColor: AppColor.kPrimary,
+        title: const Text(
+          'Login',
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -128,7 +128,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   child: const Text(
                     'Forgot Password?',
-                    style: TextStyle(color: AppColor.kPrimary),
                   ),
                 ),
               ),
@@ -137,10 +136,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ElevatedButton(
                 onPressed: _login,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.kPrimary,
                   padding: const EdgeInsets.all(15),
                 ),
-                child: const Text('Login'),
+                child: const Text(
+                  'Login',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
               ),
               const SizedBox(height: 10),
 
@@ -149,7 +150,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/register');
                 },
-                child: const Text('Don’t have an account? Register'),
+                child: const Text(
+                  'Don’t have an account? Register',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
+                ),
               ),
             ],
           ),

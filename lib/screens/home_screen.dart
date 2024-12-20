@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fashion_hub/utils/colors.dart'; // Importing your color scheme
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,18 +27,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(title: const Text('Home'), backgroundColor: AppColor.kPrimary),
+      appBar: AppBar(
+        title: const Text(
+          'Home',
+        ),
+      ),
       body: _screens[_selectedIndex], // Display the selected screen
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        backgroundColor:
-            AppColor.kSurface, // Set the background color to white (kSurface)
-        selectedItemColor:
-            AppColor.kPrimary, // Active tab color (bright orange)
-        unselectedItemColor:
-            AppColor.kTextSecondary, // Inactive tab color (gray)
         showSelectedLabels: true,
         showUnselectedLabels: true,
         items: const [
@@ -77,7 +73,6 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: AppColor.kPrimary),
             onPressed: () {
               Navigator.pushReplacementNamed(context, '/login');
             },
@@ -120,7 +115,6 @@ class AccountPage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: AppColor.kPrimary),
             onPressed: () {
               Navigator.pushReplacementNamed(context, '/login');
             },
