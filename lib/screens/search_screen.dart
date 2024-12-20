@@ -1,4 +1,3 @@
-// lib/screens/home_page.dart
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -9,14 +8,14 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  String _searchQuery = ''; // Variable to store the search input
+  String _searchQuery = '';
 
   void _onSearchChanged(String query) {
     setState(() {
       _searchQuery = query;
     });
     // Here you can perform a search or filter your data based on _searchQuery
-    print('Searching for: $_searchQuery');
+    ('Searching for: $_searchQuery');
   }
 
   @override
@@ -37,17 +36,15 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
             const SizedBox(height: 16),
             TextField(
-              onChanged:
-                  _onSearchChanged, // Listen to changes in the search bar
+              onChanged: _onSearchChanged,
               decoration: const InputDecoration(
-                labelText: 'Search Product', // Label for the search bar
-                hintText: 'Type product name...', // Hint text when empty
+                labelText: 'Search Product',
+                hintText: 'Type product name...',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
                   borderSide: BorderSide(color: Colors.grey),
                 ),
-                prefixIcon:
-                    Icon(Icons.search), // Search icon inside the input field
+                prefixIcon: Icon(Icons.search),
               ),
             ),
             const SizedBox(height: 20),
