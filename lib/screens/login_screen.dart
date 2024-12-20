@@ -1,4 +1,3 @@
-import 'package:fashion_hub/utils/colors.dart';
 import 'package:fashion_hub/utils/image_paths.dart';
 import 'package:fashion_hub/utils/snackbar.dart';
 import 'package:flutter/material.dart';
