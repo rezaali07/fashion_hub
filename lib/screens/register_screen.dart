@@ -1,6 +1,5 @@
 import 'package:fashion_hub/utils/snackbar.dart';
 import 'package:flutter/material.dart';
-import 'package:fashion_hub/utils/colors.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -56,8 +55,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Register'),
-        backgroundColor: AppColor.kPrimary,
+        title: const Text(
+          'Register',
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -167,7 +167,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ElevatedButton(
                 onPressed: _register,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.kPrimary,
                   padding: const EdgeInsets.all(15),
                 ),
                 child: const Text('Register'),

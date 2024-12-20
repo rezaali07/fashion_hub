@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:fashion_hub/utils/snackbar.dart';
-import 'package:fashion_hub/utils/colors.dart';
+import 'package:flutter/material.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -28,7 +27,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Forgot Password'),
-        backgroundColor: AppColor.kPrimary,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -65,7 +63,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             ElevatedButton(
               onPressed: _resetPassword,
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColor.kPrimary,
                 padding: const EdgeInsets.all(15),
               ),
               child: const Text('Reset Password'),
