@@ -142,7 +142,7 @@ class OnboardingPage extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: 24,
-            fontWeight: FontWeight.bold,
+            fontFamily: 'Montserrat Bold',
             color: AppColor.kPrimary,
           ),
           textAlign: TextAlign.center,
