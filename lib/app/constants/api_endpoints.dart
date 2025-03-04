@@ -31,5 +31,11 @@ class ApiEndpoints {
   static const String deleteOrder = "order/deleteOrder/";
   static const String getUserOrder = "orders/me";
 
+  // Profile API Endpoints
+  static const String updateProfile = "$baseUrl/me/update/profile";
+  static const String updatePassword = "$baseUrl/me/update";
+  static const String logout = "$baseUrl/logout";
+  static const String getUserProfile = "$baseUrl/me";
+
 
 }
