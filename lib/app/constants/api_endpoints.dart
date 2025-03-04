@@ -4,16 +4,26 @@ class ApiEndpoints {
   static const Duration connectionTimeout = Duration(seconds: 1000);
   static const Duration receiveTimeout = Duration(seconds: 1000);
 
-  // For Android Emulator
-  static const String baseUrl = "http://10.0.2.2:3000/api/v1/";
+  // for android virtual emulator
+  // static const String baseUrl = "http://10.0.2.2:4000/api/v2/";
+
+  // Phone as emulator must connect both phone and laptop in same network
+  static const String baseUrl = "http://192.168.16.100:4000/api/v2/";
 
   // ============= Auth Routes =============
-  static const String loginUser = "auth/login";
-  static const String createUser = "auth/register";
+  static const String loginUser = "login";
+  static const String createUser = "register";
   static const String getAllUsers = "auth/getAllUsers";
   static const String updateUser = "auth/updateUser";
   static const String deleteUser = "auth/deleteUser";
   static const String imageUrl = "http://10.0.2.2:3000/uploads/";
-  static const String uploadImage = "auth/uploadImage"; 
+  static const String uploadImage = "auth/uploadImage";
+
+  // ======== Products ============
+
+  static const String createProduct = "product/createProduct";
+  static const String getAllProduct = "products";
+  static const String deleteProduct = "product/";
+
 
 }
