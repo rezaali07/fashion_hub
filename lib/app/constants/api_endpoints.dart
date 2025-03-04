@@ -25,5 +25,11 @@ class ApiEndpoints {
   static const String getAllProduct = "products";
   static const String deleteProduct = "product/";
 
+  // ======== order  =============
+  static const String createOrder = "order/createOrder";
+  static const String getAllOrder = "order/getAllOrder";
+  static const String deleteOrder = "order/deleteOrder/";
+  static const String getUserOrder = "orders/me";
+
 
 }
