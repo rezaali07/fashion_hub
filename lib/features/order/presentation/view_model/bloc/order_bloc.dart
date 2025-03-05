@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:fashion_hub/features/Order/domain/use_case/create_order_usecase.dart';
 import 'package:fashion_hub/features/Order/domain/use_case/delete_order_usecase.dart';
 import 'package:fashion_hub/features/Order/domain/use_case/get_all_order_usecase.dart';
-import 'package:fashion_hub/features/Order/domain/entity/order_entity.dart';
+import 'package:fashion_hub/features/order/domain/entity/order_entity.dart';
 
 part 'order_event.dart';
 part 'order_state.dart';
