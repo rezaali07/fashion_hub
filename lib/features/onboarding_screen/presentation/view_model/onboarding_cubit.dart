@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fashion_hub/features/auth/presentation/view/login_view.dart';
 import 'package:fashion_hub/features/auth/presentation/view_model/login/login_bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OnboardingCubit extends Cubit<void> {
   OnboardingCubit(this._loginBloc) : super(null);
@@ -16,7 +16,7 @@ class OnboardingCubit extends Cubit<void> {
         MaterialPageRoute(
           builder: (context) => BlocProvider.value(
             value: _loginBloc,
-            child:  LoginView(),
+            child: LoginView(),
           ),
         ),
       );
