@@ -27,4 +27,3 @@ class SplashCubit extends Cubit<void> {
     });
   }
 }
-
