@@ -2,8 +2,6 @@ import 'package:equatable/equatable.dart';
 import 'package:fashion_hub/features/auth/domain/entity/user_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-
-
 @JsonSerializable()
 class UserApiModel extends Equatable {
   @JsonKey(name: '_id') // Binding for server variable name with userId

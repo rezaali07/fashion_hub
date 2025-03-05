@@ -9,8 +9,7 @@ import 'package:fashion_hub/features/auth/domain/repository/user_repository.dart
 class UserLocalRepository implements IUserRepository {
   final UserLocalDatasource _userLocalDataSource;
 
-  UserLocalRepository(
-      {required UserLocalDatasource userLocalDataSource})
+  UserLocalRepository({required UserLocalDatasource userLocalDataSource})
       : _userLocalDataSource = userLocalDataSource;
 
   @override
@@ -36,8 +35,7 @@ class UserLocalRepository implements IUserRepository {
   @override
   Future<Either<Failure, List<UserEntity>>> getAllUsers() async {
     try {
-      final List<UserEntity> users =
-          await _userLocalDataSource.getAllUsers();
+      final List<UserEntity> users = await _userLocalDataSource.getAllUsers();
       return Right(users);
     } catch (e) {
       return Left(LocalDatabaseFailure(message: e.toString()));

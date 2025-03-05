@@ -124,7 +124,7 @@ class UserRemoteDataSource {
       FormData formData = FormData.fromMap({
         "profilePicture":
             await MultipartFile.fromFile(file.path, filename: fileName)
-      }); 
+      });
 
       Response response =
           await _dio.post(ApiEndpoints.uploadImage, data: formData);

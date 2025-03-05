@@ -1,8 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:fashion_hub/app/constants/hive_table_constant.dart';
 import 'package:fashion_hub/features/auth/domain/entity/user_entity.dart';
-
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:uuid/uuid.dart';
 
 part 'user_hive_model.g.dart';
@@ -28,7 +27,6 @@ class UserHiveModel extends Equatable {
   UserHiveModel({
     String? userId,
     required this.name,
-    
     this.image,
     required this.email,
     required this.password,

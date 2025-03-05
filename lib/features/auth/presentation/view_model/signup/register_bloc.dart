@@ -5,7 +5,6 @@ import 'package:equatable/equatable.dart';
 import 'package:fashion_hub/features/auth/domain/use_case/create_user_usecase.dart';
 import 'package:fashion_hub/features/auth/domain/use_case/upload_image_usecase.dart';
 
-
 part 'register_event.dart';
 part 'register_state.dart';
 
@@ -14,16 +13,13 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final UploadImageUseCase _uploadImageUseCase;
 
   RegisterBloc({
-   
     required CreateUserUsecase createUserUsecase,
     required UploadImageUseCase uploadImageUseCase,
-  })  : 
-        _createUserUsecase = createUserUsecase,
+  })  : _createUserUsecase = createUserUsecase,
         _uploadImageUseCase = uploadImageUseCase,
         super(RegisterState.initial()) {
     on<RegisterUser>(_onRegisterUser);
     on<LoadImage>(_onLoadImage);
-
   }
 
   void _onLoadImage(
@@ -45,7 +41,6 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           isImageLoading: false, isImageSuccess: true, imageName: r));
     });
   }
-
 
   Future<void> _onRegisterUser(
       RegisterUser event, Emitter<RegisterState> emit) async {

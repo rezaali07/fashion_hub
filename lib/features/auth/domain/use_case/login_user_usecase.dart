@@ -21,8 +21,7 @@ class LoginUserParams extends Equatable {
       ];
 }
 
-class LoginUserUsecase
-    implements UsecaseWithParams<String, LoginUserParams> {
+class LoginUserUsecase implements UsecaseWithParams<String, LoginUserParams> {
   final IUserRepository userRepository;
   final TokenSharedPrefs tokenSharedPrefs;
 
@@ -32,9 +31,7 @@ class LoginUserUsecase
   @override
   Future<Either<Failure, String>> call(LoginUserParams params) async {
     //Save token in Shared Preferences
-    return userRepository
-        .login(params.email, params.password)
-        .then((value) {
+    return userRepository.login(params.email, params.password).then((value) {
       return value.fold(
         (failure) => Left(failure),
         (token) {

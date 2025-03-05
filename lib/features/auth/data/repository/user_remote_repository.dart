@@ -12,8 +12,7 @@ class UserRemoteRepository implements IUserRepository {
   UserRemoteRepository(this._userRemoteDataSource);
 
   @override
-  Future<Either<Failure, void>> createUser(
-      UserEntity userEntity) async {
+  Future<Either<Failure, void>> createUser(UserEntity userEntity) async {
     try {
       await _userRemoteDataSource.createUser(userEntity);
       return const Right(null);
@@ -56,8 +55,7 @@ class UserRemoteRepository implements IUserRepository {
 
   @override
   // Future<Either<Failure, UserEntity>> login(
-  Future<Either<Failure, String>> login(
-      String email, String password) async {
+  Future<Either<Failure, String>> login(String email, String password) async {
     try {
       final token = await _userRemoteDataSource.login(email, password);
 
