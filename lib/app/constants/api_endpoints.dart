@@ -36,6 +36,4 @@ class ApiEndpoints {
   static const String updatePassword = "$baseUrl/me/update";
   static const String logout = "$baseUrl/logout";
   static const String getUserProfile = "$baseUrl/me";
-
-
 }

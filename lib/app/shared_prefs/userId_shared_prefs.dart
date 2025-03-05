@@ -4,9 +4,9 @@ import 'package:dartz/dartz.dart';
 import 'package:fashion_hub/core/error/failure.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class TokenSharedPrefs {
+class UserIdSharedPrefs {
   final SharedPreferences _sharedPreferences;
-  TokenSharedPrefs(this._sharedPreferences);
+  UserIdSharedPrefs(this._sharedPreferences);
 
   Future<Either<Failure, void>> saveToken(String token) async {
     try {
@@ -25,7 +25,7 @@ class TokenSharedPrefs {
       return Left(SharedPrefsFailure(message: e.toString()));
     }
   }
-   // Save user ID to SharedPreferences
+  // Save user ID to SharedPreferences
   Future<Either<Failure, void>> saveUserId(String userId) async {
     try {
       await _sharedPreferences.setString('userId', userId);
@@ -81,7 +81,4 @@ class TokenSharedPrefs {
       return false;
     }
   }
-
-  
-
 }
