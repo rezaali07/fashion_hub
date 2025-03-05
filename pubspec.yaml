@@ -32,6 +32,10 @@ dependencies:
   get_it: ^8.0.3
   flutter_bloc: ^9.0.0
   bloc: ^9.0.0
+  carousel_slider: ^5.0.0
+
+  sensors_plus: ^6.1.1
+  proximity_sensor: ^1.3.7
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +60,8 @@ flutter:
   assets:
     - assets/fonts/
     - assets/images/
+    - assets/carousel_img/
+
 
   fonts:
     - family: Montserrat
